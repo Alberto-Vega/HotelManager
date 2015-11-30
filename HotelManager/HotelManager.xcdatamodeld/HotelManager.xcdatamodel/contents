@@ -1,4 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model name="Test1.xcdatamodel" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <elements/>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9057" systemVersion="15B42" minimumToolsVersion="Automatic">
+    <entity name="Entity2" syncable="YES"/>
+    <entity name="Entity3" syncable="YES"/>
+    <entity name="Hotel" syncable="YES">
+        <attribute name="location" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="stars" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="rooms" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Room" inverseName="newRelationship" inverseEntity="Room" syncable="YES"/>
+    </entity>
+    <entity name="Room" syncable="YES">
+        <attribute name="beds" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="number" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="rate" optional="YES" attributeType="Float" defaultValueString="0" syncable="YES"/>
+        <relationship name="newRelationship" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Hotel" inverseName="rooms" inverseEntity="Hotel" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Entity2" positionX="126" positionY="-25" width="128" height="43"/>
+        <element name="Entity3" positionX="277" positionY="-25" width="128" height="43"/>
+        <element name="Hotel" positionX="-182" positionY="-27" width="128" height="103"/>
+        <element name="Room" positionX="-27" positionY="-25" width="128" height="103"/>
+    </elements>
 </model>
