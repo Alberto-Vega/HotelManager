@@ -7,8 +7,17 @@
 //
 
 #import "AppDelegate.h"
+#import "ViewController.h"
+
+#import "Hotel.h"
+#import "Room.h"
+#import "Reservation.h"
+#import "Guest.h"
 
 @interface AppDelegate ()
+
+@property (strong, nonatomic) UINavigationController *navigationController;
+@property (strong, nonatomic) ViewController *viewController;
 
 @end
 
@@ -16,7 +25,8 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    [self setupRootViewController];
+    [self bootstrapApp];
     return YES;
 }
 
@@ -42,6 +52,16 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     // Saves changes in the application's managed object context before the application terminates.
     [self saveContext];
+}
+
+- (void)setupRootViewController {
+    self.window = [[UIWindow alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
+    self.viewController = [[ViewController alloc]init];
+    self.navigationController = [[UINavigationController alloc]initWithRootViewController:self.viewController];
+    
+    self.window.rootViewController = self.navigationController;
+    
+    [self.window makeKeyAndVisible];
 }
 
 #pragma mark - Core Data stack
