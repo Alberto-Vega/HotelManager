@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF3201EF1C0D075700A3E2B4 /* Guest+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = BF3201E01C0D075700A3E2B4 /* Guest+CoreDataProperties.m */; };
+		BF3201F01C0D075700A3E2B4 /* Guest.m in Sources */ = {isa = PBXBuildFile; fileRef = BF3201E21C0D075700A3E2B4 /* Guest.m */; };
+		BF3201F11C0D075700A3E2B4 /* Hotel+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = BF3201E41C0D075700A3E2B4 /* Hotel+CoreDataProperties.m */; };
+		BF3201F21C0D075700A3E2B4 /* Hotel.m in Sources */ = {isa = PBXBuildFile; fileRef = BF3201E61C0D075700A3E2B4 /* Hotel.m */; };
+		BF3201F31C0D075700A3E2B4 /* Room+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = BF3201E81C0D075700A3E2B4 /* Room+CoreDataProperties.m */; };
+		BF3201F41C0D075700A3E2B4 /* Room.m in Sources */ = {isa = PBXBuildFile; fileRef = BF3201EA1C0D075700A3E2B4 /* Room.m */; };
+		BF3201F51C0D075700A3E2B4 /* Reservation+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = BF3201EC1C0D075700A3E2B4 /* Reservation+CoreDataProperties.m */; };
+		BF3201F61C0D075700A3E2B4 /* Reservation.m in Sources */ = {isa = PBXBuildFile; fileRef = BF3201EE1C0D075700A3E2B4 /* Reservation.m */; };
 		BFCCBB7E1C0CF5A3002419AB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BFCCBB7D1C0CF5A3002419AB /* main.m */; };
 		BFCCBB811C0CF5A3002419AB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BFCCBB801C0CF5A3002419AB /* AppDelegate.m */; };
 		BFCCBB841C0CF5A3002419AB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFCCBB831C0CF5A3002419AB /* ViewController.m */; };
@@ -36,6 +44,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BF3201DF1C0D075700A3E2B4 /* Guest+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Guest+CoreDataProperties.h"; sourceTree = "<group>"; };
+		BF3201E01C0D075700A3E2B4 /* Guest+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Guest+CoreDataProperties.m"; sourceTree = "<group>"; };
+		BF3201E11C0D075700A3E2B4 /* Guest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Guest.h; sourceTree = "<group>"; };
+		BF3201E21C0D075700A3E2B4 /* Guest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Guest.m; sourceTree = "<group>"; };
+		BF3201E31C0D075700A3E2B4 /* Hotel+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Hotel+CoreDataProperties.h"; sourceTree = "<group>"; };
+		BF3201E41C0D075700A3E2B4 /* Hotel+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Hotel+CoreDataProperties.m"; sourceTree = "<group>"; };
+		BF3201E51C0D075700A3E2B4 /* Hotel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hotel.h; sourceTree = "<group>"; };
+		BF3201E61C0D075700A3E2B4 /* Hotel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Hotel.m; sourceTree = "<group>"; };
+		BF3201E71C0D075700A3E2B4 /* Room+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Room+CoreDataProperties.h"; sourceTree = "<group>"; };
+		BF3201E81C0D075700A3E2B4 /* Room+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Room+CoreDataProperties.m"; sourceTree = "<group>"; };
+		BF3201E91C0D075700A3E2B4 /* Room.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Room.h; sourceTree = "<group>"; };
+		BF3201EA1C0D075700A3E2B4 /* Room.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Room.m; sourceTree = "<group>"; };
+		BF3201EB1C0D075700A3E2B4 /* Reservation+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Reservation+CoreDataProperties.h"; sourceTree = "<group>"; };
+		BF3201EC1C0D075700A3E2B4 /* Reservation+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Reservation+CoreDataProperties.m"; sourceTree = "<group>"; };
+		BF3201ED1C0D075700A3E2B4 /* Reservation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reservation.h; sourceTree = "<group>"; };
+		BF3201EE1C0D075700A3E2B4 /* Reservation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reservation.m; sourceTree = "<group>"; };
 		BFCCBB791C0CF5A3002419AB /* HotelManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HotelManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFCCBB7D1C0CF5A3002419AB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BFCCBB7F1C0CF5A3002419AB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -80,9 +104,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BF3201F71C0D076D00A3E2B4 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				BF3201DF1C0D075700A3E2B4 /* Guest+CoreDataProperties.h */,
+				BF3201E01C0D075700A3E2B4 /* Guest+CoreDataProperties.m */,
+				BF3201E31C0D075700A3E2B4 /* Hotel+CoreDataProperties.h */,
+				BF3201E41C0D075700A3E2B4 /* Hotel+CoreDataProperties.m */,
+				BF3201E71C0D075700A3E2B4 /* Room+CoreDataProperties.h */,
+				BF3201E81C0D075700A3E2B4 /* Room+CoreDataProperties.m */,
+				BF3201EB1C0D075700A3E2B4 /* Reservation+CoreDataProperties.h */,
+				BF3201EC1C0D075700A3E2B4 /* Reservation+CoreDataProperties.m */,
+			);
+			name = Entities;
+			sourceTree = "<group>";
+		};
+		BF3201F81C0D079100A3E2B4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BFCCBB881C0CF5A3002419AB /* HotelManager.xcdatamodeld */,
+				BF3201F71C0D076D00A3E2B4 /* Entities */,
+				BF3201E11C0D075700A3E2B4 /* Guest.h */,
+				BF3201E21C0D075700A3E2B4 /* Guest.m */,
+				BF3201E51C0D075700A3E2B4 /* Hotel.h */,
+				BF3201E61C0D075700A3E2B4 /* Hotel.m */,
+				BF3201E91C0D075700A3E2B4 /* Room.h */,
+				BF3201EA1C0D075700A3E2B4 /* Room.m */,
+				BF3201ED1C0D075700A3E2B4 /* Reservation.h */,
+				BF3201EE1C0D075700A3E2B4 /* Reservation.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		BFCCBB701C0CF5A3002419AB = {
 			isa = PBXGroup;
 			children = (
+				BF3201F81C0D079100A3E2B4 /* Model */,
 				BFCCBB7B1C0CF5A3002419AB /* HotelManager */,
 				BFCCBB981C0CF5A3002419AB /* HotelManagerTests */,
 				BFCCBBA31C0CF5A3002419AB /* HotelManagerUITests */,
@@ -111,7 +168,6 @@
 				BFCCBB8B1C0CF5A3002419AB /* Assets.xcassets */,
 				BFCCBB8D1C0CF5A3002419AB /* LaunchScreen.storyboard */,
 				BFCCBB901C0CF5A3002419AB /* Info.plist */,
-				BFCCBB881C0CF5A3002419AB /* HotelManager.xcdatamodeld */,
 				BFCCBB7C1C0CF5A3002419AB /* Supporting Files */,
 			);
 			path = HotelManager;
@@ -273,9 +329,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF3201F41C0D075700A3E2B4 /* Room.m in Sources */,
+				BF3201F31C0D075700A3E2B4 /* Room+CoreDataProperties.m in Sources */,
+				BF3201F01C0D075700A3E2B4 /* Guest.m in Sources */,
+				BF3201EF1C0D075700A3E2B4 /* Guest+CoreDataProperties.m in Sources */,
+				BF3201F11C0D075700A3E2B4 /* Hotel+CoreDataProperties.m in Sources */,
 				BFCCBB8A1C0CF5A3002419AB /* HotelManager.xcdatamodeld in Sources */,
+				BF3201F61C0D075700A3E2B4 /* Reservation.m in Sources */,
+				BF3201F51C0D075700A3E2B4 /* Reservation+CoreDataProperties.m in Sources */,
 				BFCCBB841C0CF5A3002419AB /* ViewController.m in Sources */,
 				BFCCBB811C0CF5A3002419AB /* AppDelegate.m in Sources */,
+				BF3201F21C0D075700A3E2B4 /* Hotel.m in Sources */,
 				BFCCBB7E1C0CF5A3002419AB /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -502,6 +566,7 @@
 				BFCCBBAB1C0CF5A3002419AB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BFCCBBAC1C0CF5A3002419AB /* Build configuration list for PBXNativeTarget "HotelManagerTests" */ = {
 			isa = XCConfigurationList;
@@ -510,6 +575,7 @@
 				BFCCBBAE1C0CF5A3002419AB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BFCCBBAF1C0CF5A3002419AB /* Build configuration list for PBXNativeTarget "HotelManagerUITests" */ = {
 			isa = XCConfigurationList;
@@ -518,6 +584,7 @@
 				BFCCBBB11C0CF5A3002419AB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
@@ -528,7 +595,8 @@
 				BFCCBB891C0CF5A3002419AB /* HotelManager.xcdatamodel */,
 			);
 			currentVersion = BFCCBB891C0CF5A3002419AB /* HotelManager.xcdatamodel */;
-			path = HotelManager.xcdatamodeld;
+			name = HotelManager.xcdatamodeld;
+			path = HotelManager/HotelManager.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
