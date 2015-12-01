@@ -64,6 +64,53 @@
     [self.window makeKeyAndVisible];
 }
 
+- (void)bootstrapApp {
+    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Hotel"];
+    NSError *error;
+    NSInteger count = [self.managedObjectContext countForFetchRequest:request error:&error];
+    
+    if (count == 0) {
+        NSDictionary *hotels = [NSDictionary new];
+        NSDictionary *rooms = [NSDictionary new];
+        
+        NSString *jsonPath = [[NSBundle mainBundle]pathForResource:@"hotels" ofType:@"json"];
+        NSData *jsonData = [NSData dataWithContentsOfFile:jsonPath];
+        
+        NSError *jsonError;
+        NSDictionary *rootObject = [NSJSONSerialization JSONObjectWithData:jsonData options:0 error:&jsonError];
+        
+        if (jsonError) { NSLog(@"Error serializing JSON."); return; }
+        hotels = rootObject[@"Hotels"];
+        
+        for (NSDictionary *hotel in hotels) {
+            Hotel *newHotel = [NSEntityDescription insertNewObjectForEntityForName:@"Hotel" inManagedObjectContext:self.managedObjectContext];
+            newHotel.name = hotel[@"name"];
+            newHotel.location = hotel[@"location"];
+            newHotel.stars = hotel[@"stars"];
+            
+            rooms = hotel[@"rooms"];
+            
+            for (NSDictionary *room in rooms) {
+                Room *newRoom = [NSEntityDescription insertNewObjectForEntityForName:@"Room" inManagedObjectContext:self.managedObjectContext];
+                
+                newRoom.number = room[@"number"];
+                newRoom.beds = room[@"beds"];
+                newRoom.rate = room[@"rate"];
+                newRoom.hotel = newHotel;
+            }
+        }
+        
+        NSError *saveError;
+        BOOL isSaved = [self.managedObjectContext save:&saveError];
+        
+        if (isSaved) {
+            NSLog(@"Saved successfully.");
+        } else {
+            NSLog(@"%@", saveError.localizedDescription);
+        }
+    }
+}
+
 #pragma mark - Core Data stack
 
 @synthesize managedObjectContext = _managedObjectContext;
