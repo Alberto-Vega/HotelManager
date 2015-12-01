@@ -1,41 +1,20 @@
 //
-//  HotelsViewController.m
+//  RoomsViewController.m
 //  HotelManager
 //
 //  Created by Alberto Vega Gonzalez on 11/30/15.
 //  Copyright © 2015 Alberto Vega Gonzalez. All rights reserved.
 //
 
-#import "HotelsViewController.h"
-#import "AppDelegate.h"
-#import "Hotel.h"
 #import "RoomsViewController.h"
+#import "Room.h"
 
-@interface HotelsViewController () <UITableViewDelegate, UITableViewDataSource>
-
-@property (strong, nonatomic) NSArray *datasource;
+@interface RoomsViewController () <UITableViewDelegate, UITableViewDataSource>
 @property (strong, nonatomic) UITableView *tableView;
 
 @end
 
-@implementation HotelsViewController
-
-- (NSArray *)datasource {
-    if (!_datasource) {
-        AppDelegate *delegate = (AppDelegate *) [[UIApplication sharedApplication]delegate];
-        
-        NSManagedObjectContext *context = delegate.managedObjectContext;
-        NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Hotel"];
-        
-        NSError *fetchError;
-        _datasource = [context executeFetchRequest:request error:&fetchError];
-        
-        if (fetchError) {
-            NSLog(@"Error fetching from Core Data.");
-        }
-    }
-    return _datasource;
-}
+@implementation RoomsViewController
 
 - (void)loadView {
     [super loadView];
@@ -44,7 +23,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setupHotelsViewController];
+    [self setupRoomsViewController];
     [self setupTableView];
 }
 
@@ -53,19 +32,18 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)setupHotelsViewController {
-    
+- (void)setupRoomsViewController {
+    [self setTitle:@"Rooms"];
 }
 
 - (void)setupTableView {
-    
     self.tableView = [[UITableView alloc]init];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     self.tableView.translatesAutoresizingMaskIntoConstraints = NO;
     
     [self.view addSubview:self.tableView];
-    [self.tableView registerClass:[UITableViewCell class]  forCellReuseIdentifier:@"cell"];
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
     
     NSLayoutConstraint *leading = [NSLayoutConstraint constraintWithItem:self.tableView attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeLeading multiplier:1.0 constant:0.0];
     NSLayoutConstraint *top = [NSLayoutConstraint constraintWithItem:self.tableView attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTop multiplier:1.0 constant:0.0];
@@ -78,50 +56,40 @@
     bottom.active = YES;
 }
 
-#pragma mark - UITableView
+#pragma mark - UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [self.datasource count];
+    return [self.hotel.rooms count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"forIndexPath:indexPath];
     
     if (!cell) {
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
     }
     
-    Hotel *hotel = self.datasource[indexPath.row];
-    cell.textLabel.text = hotel.name;
+    Room *room = (Room *)[self.hotel.rooms allObjects][indexPath.row];
+    cell.textLabel.text = [NSString stringWithFormat:@"Room %i (%i beds, $%0.2f per night)", room.number.intValue, room.beds.intValue, room.rate.floatValue];
     
     return cell;
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+#pragma mark - UITableViewDelegate
+
+-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
     return 150.0;
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
-    
-    UIImage *headerImage = [UIImage imageNamed:@"hotel"];
+    UIImage *headerImage = [UIImage imageNamed:@"room"];
     UIImageView *imageView = [[UIImageView alloc]initWithImage:headerImage];
     
     imageView.frame = CGRectMake(0.0, 0.0, CGRectGetWidth(self.view.frame), 150.0);
-    
     imageView.contentMode = UIViewContentModeScaleAspectFill;
     imageView.clipsToBounds = YES;
-    
     return imageView;
 }
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    Hotel *hotel = self.datasource[indexPath.row];
-    RoomsViewController *roomsViewController = [[RoomsViewController alloc]init];
-    roomsViewController.hotel = hotel;
-    
-    [self.navigationController pushViewController:roomsViewController animated:YES];
-}
-
 /*
 #pragma mark - Navigation
 

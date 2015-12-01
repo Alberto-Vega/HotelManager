@@ -16,6 +16,8 @@
 		BF3201F51C0D075700A3E2B4 /* Reservation+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = BF3201EC1C0D075700A3E2B4 /* Reservation+CoreDataProperties.m */; };
 		BF3201F61C0D075700A3E2B4 /* Reservation.m in Sources */ = {isa = PBXBuildFile; fileRef = BF3201EE1C0D075700A3E2B4 /* Reservation.m */; };
 		BF3201FC1C0D1C5700A3E2B4 /* HotelsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF3201FB1C0D1C5700A3E2B4 /* HotelsViewController.m */; };
+		BF3201FF1C0D2B2800A3E2B4 /* RoomsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF3201FE1C0D2B2800A3E2B4 /* RoomsViewController.m */; };
+		BF3202011C0D37C400A3E2B4 /* hotels.json in Resources */ = {isa = PBXBuildFile; fileRef = BF3202001C0D37C400A3E2B4 /* hotels.json */; };
 		BFCCBB7E1C0CF5A3002419AB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BFCCBB7D1C0CF5A3002419AB /* main.m */; };
 		BFCCBB811C0CF5A3002419AB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BFCCBB801C0CF5A3002419AB /* AppDelegate.m */; };
 		BFCCBB841C0CF5A3002419AB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFCCBB831C0CF5A3002419AB /* ViewController.m */; };
@@ -62,6 +64,9 @@
 		BF3201EE1C0D075700A3E2B4 /* Reservation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reservation.m; sourceTree = "<group>"; };
 		BF3201FA1C0D1C5700A3E2B4 /* HotelsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotelsViewController.h; sourceTree = "<group>"; };
 		BF3201FB1C0D1C5700A3E2B4 /* HotelsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotelsViewController.m; sourceTree = "<group>"; };
+		BF3201FD1C0D2B2800A3E2B4 /* RoomsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoomsViewController.h; sourceTree = "<group>"; };
+		BF3201FE1C0D2B2800A3E2B4 /* RoomsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoomsViewController.m; sourceTree = "<group>"; };
+		BF3202001C0D37C400A3E2B4 /* hotels.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = hotels.json; sourceTree = "<group>"; };
 		BFCCBB791C0CF5A3002419AB /* HotelManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HotelManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFCCBB7D1C0CF5A3002419AB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BFCCBB7F1C0CF5A3002419AB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -145,6 +150,8 @@
 				BFCCBB831C0CF5A3002419AB /* ViewController.m */,
 				BF3201FA1C0D1C5700A3E2B4 /* HotelsViewController.h */,
 				BF3201FB1C0D1C5700A3E2B4 /* HotelsViewController.m */,
+				BF3201FD1C0D2B2800A3E2B4 /* RoomsViewController.h */,
+				BF3201FE1C0D2B2800A3E2B4 /* RoomsViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -177,6 +184,7 @@
 				BFCCBB801C0CF5A3002419AB /* AppDelegate.m */,
 				BF3201F91C0D133100A3E2B4 /* Controllers */,
 				BFCCBB8B1C0CF5A3002419AB /* Assets.xcassets */,
+				BF3202001C0D37C400A3E2B4 /* hotels.json */,
 				BFCCBB8D1C0CF5A3002419AB /* LaunchScreen.storyboard */,
 				BFCCBB901C0CF5A3002419AB /* Info.plist */,
 				BFCCBB7C1C0CF5A3002419AB /* Supporting Files */,
@@ -313,6 +321,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF3202011C0D37C400A3E2B4 /* hotels.json in Resources */,
 				BFCCBB8F1C0CF5A3002419AB /* LaunchScreen.storyboard in Resources */,
 				BFCCBB8C1C0CF5A3002419AB /* Assets.xcassets in Resources */,
 			);
@@ -350,6 +359,7 @@
 				BF3201F51C0D075700A3E2B4 /* Reservation+CoreDataProperties.m in Sources */,
 				BFCCBB841C0CF5A3002419AB /* ViewController.m in Sources */,
 				BFCCBB811C0CF5A3002419AB /* AppDelegate.m in Sources */,
+				BF3201FF1C0D2B2800A3E2B4 /* RoomsViewController.m in Sources */,
 				BF3201F21C0D075700A3E2B4 /* Hotel.m in Sources */,
 				BFCCBB7E1C0CF5A3002419AB /* main.m in Sources */,
 			);
