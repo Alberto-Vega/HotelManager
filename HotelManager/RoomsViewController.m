@@ -10,6 +10,7 @@
 #import "Room.h"
 
 @interface RoomsViewController () <UITableViewDelegate, UITableViewDataSource>
+
 @property (strong, nonatomic) UITableView *tableView;
 
 @end

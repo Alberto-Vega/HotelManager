@@ -95,6 +95,13 @@
     [browseButton addTarget:self action:@selector(browseButtonSelected:) forControlEvents:UIControlEventTouchUpInside];
     [bookButton addTarget:self action:@selector(bookButtonSelected:) forControlEvents:UIControlEventTouchUpInside];
     [lookupButton addTarget:self action:@selector(lookupButtonSelected:) forControlEvents:UIControlEventTouchUpInside];
+    //... Make the nav bar transparent.
+//    [self.navigationController.navigationBar setBackgroundImage:[UIImage new]
+//                             forBarMetrics:UIBarMetricsDefault];
+//    self.navigationController.navigationBar.shadowImage = [UIImage new];
+//    self.navigationController.navigationBar.translucent = YES;
+//    self.navigationController.navigationBar.tintColor = [UIColor clearColor];
+//    self.navigationController.navigationBar.backgroundColor = [UIColor clearColor];
 }
 
 - (void)browseButtonSelected: (UIButton *)sender {
