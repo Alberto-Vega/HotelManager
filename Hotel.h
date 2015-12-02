@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
+@class Room;
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface Hotel : NSManagedObject

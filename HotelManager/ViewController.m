@@ -8,6 +8,8 @@
 
 #import "ViewController.h"
 #import "HotelsViewController.h"
+#import "DateViewController.h"
+#import "AppDelegate.h"
 
 @interface ViewController ()
 
@@ -22,12 +24,27 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setupViewController];
     // Do any additional setup after loading the view, typically from a nib.
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    AppDelegate *delegate = (AppDelegate *) [[UIApplication sharedApplication]delegate];
+    NSManagedObjectContext *context = delegate.managedObjectContext;
+    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Guest"];
+    NSArray *guests = [context executeFetchRequest:request error:nil];
+    NSLog(@"%li", guests.count);
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)setupViewController {
+    [self.navigationItem setTitle:@"H & M"];
 }
 
 - (void)setupCustomLayout {
@@ -109,7 +126,7 @@
 }
 
 - (void)bookButtonSelected: (UIButton *)sender {
-    
+    [self.navigationController pushViewController:[DateViewController new] animated:YES];
 }
 
 - (void)lookupButtonSelected: (UIButton *)sender {
