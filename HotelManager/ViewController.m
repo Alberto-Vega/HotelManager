@@ -10,6 +10,7 @@
 #import "HotelsViewController.h"
 #import "DateViewController.h"
 #import "AppDelegate.h"
+#import "LookUpViewController.h"
 
 @interface ViewController ()
 
@@ -32,6 +33,7 @@
     [super viewWillAppear:animated];
     
     AppDelegate *delegate = (AppDelegate *) [[UIApplication sharedApplication]delegate];
+    
     NSManagedObjectContext *context = delegate.managedObjectContext;
     NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Guest"];
     NSArray *guests = [context executeFetchRequest:request error:nil];
@@ -112,13 +114,6 @@
     [browseButton addTarget:self action:@selector(browseButtonSelected:) forControlEvents:UIControlEventTouchUpInside];
     [bookButton addTarget:self action:@selector(bookButtonSelected:) forControlEvents:UIControlEventTouchUpInside];
     [lookupButton addTarget:self action:@selector(lookupButtonSelected:) forControlEvents:UIControlEventTouchUpInside];
-    //... Make the nav bar transparent.
-//    [self.navigationController.navigationBar setBackgroundImage:[UIImage new]
-//                             forBarMetrics:UIBarMetricsDefault];
-//    self.navigationController.navigationBar.shadowImage = [UIImage new];
-//    self.navigationController.navigationBar.translucent = YES;
-//    self.navigationController.navigationBar.tintColor = [UIColor clearColor];
-//    self.navigationController.navigationBar.backgroundColor = [UIColor clearColor];
 }
 
 - (void)browseButtonSelected: (UIButton *)sender {
@@ -130,7 +125,7 @@
 }
 
 - (void)lookupButtonSelected: (UIButton *)sender {
-    
+    [self.navigationController pushViewController:[LookUpViewController new] animated:YES];
 }
 
 @end

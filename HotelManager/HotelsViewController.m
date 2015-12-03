@@ -46,6 +46,14 @@
     [super viewDidLoad];
     [self setupHotelsViewController];
     [self setupTableView];
+    
+    //... Make the nav bar transparent.
+//        [self.navigationController.navigationBar setBackgroundImage:[UIImage new]
+//                                 forBarMetrics:UIBarMetricsDefault];
+//        self.navigationController.navigationBar.shadowImage = [UIImage new];
+//        self.navigationController.navigationBar.translucent = YES;
+//        self.navigationController.navigationBar.tintColor = [UIColor clearColor];
+//        self.navigationController.navigationBar.backgroundColor = [UIColor clearColor];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -98,7 +106,7 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    return 150.0;
+    return 200.0;
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
@@ -106,8 +114,7 @@
     UIImage *headerImage = [UIImage imageNamed:@"hotel"];
     UIImageView *imageView = [[UIImageView alloc]initWithImage:headerImage];
     
-    imageView.frame = CGRectMake(0.0, 0.0, CGRectGetWidth(self.view.frame), 150.0);
-    
+    imageView.frame = CGRectMake(0.0, 0.0, CGRectGetWidth(self.view.frame), 200.0);
     imageView.contentMode = UIViewContentModeScaleAspectFill;
     imageView.clipsToBounds = YES;
     

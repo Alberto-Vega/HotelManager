@@ -7,8 +7,11 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "NSObject+NSmanagedObjectContext_Category.h"
 
 @interface HotelManagerTests : XCTestCase
+
+@property (strong, nonatomic) NSManagedObjectContext *context;
 
 @end
 
@@ -16,17 +19,35 @@
 
 - (void)setUp {
     [super setUp];
+    [self setContext: [NSManagedObjectContext managerContext]];
     // Put setup code here. This method is called before the invocation of each test method in the class.
 }
 
 - (void)tearDown {
     // Put teardown code here. This method is called after the invocation of each test method in the class.
+    [self setContext:nil];
     [super tearDown];
 }
 
-- (void)testExample {
-    // This is an example of a functional test case.
-    // Use XCTAssert and related functions to verify your tests produce the correct results.
+- (void)testContextCreation {
+    XCTAssertNotNil(self.context, @"Context should not be nil. Check category implementation");
+}
+
+- (void)testContextOnMainQueue {
+    XCTAssertTrue(self.context.concurrencyType == NSMainQueueConcurrencyType, @"Context should be created on the main Queue.");
+}
+
+- (void)testCoreDataSave {
+    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Hotel"];
+    request.resultType = NSCountResultType;
+    
+    NSError *error;
+    NSArray *result = [self.context executeFetchRequest:request error:&error];
+    NSNumber *count = [result firstObject];
+    
+    XCTAssertNil(error, @"Error should be nil.");
+    XCTAssertNotNil(result, @"Result array sould not be nil.");
+    XCTAssertTrue([count intValue] > 0, @"Number of objects in the database after seeding should be greater than 0.");
 }
 
 - (void)testPerformanceExample {

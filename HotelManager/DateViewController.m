@@ -21,13 +21,6 @@
 - (void)loadView {
     [super loadView];
     [self.view setBackgroundColor:[UIColor whiteColor]];
-    
-    
-// Create a second Picker.
-//    UIDatePicker *startDatePicker = [[UIDatePicker alloc]init];
-//    self.startDatePicker = startDatePicker;
-//    [startDatePicker addTarget:self action:@selector(datePickerValueChanged:) forControlEvents:UIControlEventValueChanged];
-//    
     }
 
 - (void)viewDidLoad {
@@ -48,11 +41,45 @@
 }
 
 - (void)setupDatePickers {
+    
+    float navigationBarHeight = CGRectGetHeight(self.navigationController.navigationBar.frame);
+
     self.endDatePicker = [[UIDatePicker alloc]init];
     self.endDatePicker.datePickerMode = UIDatePickerModeDate;
     self.endDatePicker.frame = CGRectMake(0.0, 84.0, CGRectGetWidth(self.view.frame), 200);
-    [self.view addSubview:self.endDatePicker];
     
+    self.startDatePicker = [[UIDatePicker alloc]init];
+    self.startDatePicker.datePickerMode = UIDatePickerModeDate;
+    self.startDatePicker.frame = CGRectMake(0.0, 84.0, CGRectGetWidth(self.view.frame), 200);
+    
+    
+    [self.startDatePicker setTranslatesAutoresizingMaskIntoConstraints: NO];
+    [self.endDatePicker setTranslatesAutoresizingMaskIntoConstraints:NO];
+    
+    NSLayoutConstraint *startPickerLeading = [NSLayoutConstraint constraintWithItem:self.startDatePicker attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeLeading multiplier:1.0 constant:0.0];
+    NSLayoutConstraint *startPickerTop = [NSLayoutConstraint constraintWithItem:self.startDatePicker attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTop multiplier:1.0 constant:64.0];
+    NSLayoutConstraint *startPickerTrailing = [NSLayoutConstraint constraintWithItem:self.startDatePicker attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTrailing multiplier:1.0 constant:0.0];
+    
+    NSLayoutConstraint *endPickerLeading = [NSLayoutConstraint constraintWithItem:self.endDatePicker attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeLeading multiplier:1.0 constant:0.0];
+    NSLayoutConstraint *endPickerCenterY = [NSLayoutConstraint constraintWithItem:self.endDatePicker attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeCenterY multiplier:1.0 constant: navigationBarHeight / 1.4]; // Height is set to be 0.3 of the view. 0.3333333333333 problem.
+    NSLayoutConstraint *endPickerTrailing = [NSLayoutConstraint constraintWithItem:self.endDatePicker attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTrailing multiplier:1.0 constant:0.0];
+
+    
+    
+    [self.view addSubview:self.endDatePicker];
+    [self.view addSubview:self.startDatePicker];
+    
+    // Activate constraints.
+    startPickerLeading.active = YES;
+    startPickerTop.active = YES;
+    startPickerTrailing.active = YES;
+    
+    endPickerLeading.active = YES;
+    endPickerCenterY.active = YES;
+    endPickerTrailing.active = YES;
+    
+
+
 }
 
 - (void)doneButtonSelected:(UIBarButtonItem *)sender {
@@ -61,14 +88,8 @@
     
     if ([[NSDate date] timeIntervalSinceReferenceDate] > [endDate timeIntervalSinceReferenceDate]) {
         
-        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Invalid Date" message:@"Please make sure end date is in the future." preferredStyle:UIAlertControllerStyleAlert];
-        UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-            self.endDatePicker.date = [NSDate date];
-        }];
-        [alertController addAction:okAction];
-        [self presentViewController:alertController animated:YES completion:nil];
-        
-        return;
+    
+    
     }
     
     AvailabilityViewController *availabilityViewController = [[AvailabilityViewController alloc]init];
