@@ -74,6 +74,7 @@
 		BF3201FD1C0D2B2800A3E2B4 /* RoomsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoomsViewController.h; sourceTree = "<group>"; };
 		BF3201FE1C0D2B2800A3E2B4 /* RoomsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoomsViewController.m; sourceTree = "<group>"; };
 		BF3202001C0D37C400A3E2B4 /* hotels.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = hotels.json; sourceTree = "<group>"; };
+		BF646E671C10F1EE00491445 /* HotelManager 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "HotelManager 2.xcdatamodel"; sourceTree = "<group>"; };
 		BF68FFE31C0FA84900D08055 /* LookUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LookUpViewController.h; sourceTree = "<group>"; };
 		BF68FFE41C0FA84900D08055 /* LookUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LookUpViewController.m; sourceTree = "<group>"; };
 		BF68FFE71C0FCACA00D08055 /* NSObject+CoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+CoreDataStack.h"; sourceTree = "<group>"; };
@@ -689,9 +690,10 @@
 		BFCCBB881C0CF5A3002419AB /* HotelManager.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				BF646E671C10F1EE00491445 /* HotelManager 2.xcdatamodel */,
 				BFCCBB891C0CF5A3002419AB /* HotelManager.xcdatamodel */,
 			);
-			currentVersion = BFCCBB891C0CF5A3002419AB /* HotelManager.xcdatamodel */;
+			currentVersion = BF646E671C10F1EE00491445 /* HotelManager 2.xcdatamodel */;
 			name = HotelManager.xcdatamodeld;
 			path = HotelManager/HotelManager.xcdatamodeld;
 			sourceTree = "<group>";

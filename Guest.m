@@ -22,4 +22,15 @@
     return guest;
 }
 
++ (instancetype)guestWithNameAndLastName:(NSString *)name lastName:(NSString *)lastName {
+    AppDelegate *delegate = (AppDelegate *)[[UIApplication sharedApplication]delegate];
+    
+    Guest *guest = [NSEntityDescription insertNewObjectForEntityForName:@"Guest" inManagedObjectContext:delegate.managedObjectContext];
+    
+    guest.name = name;
+    guest.lastName = lastName;
+    
+    return guest;
+}
+
 @end
