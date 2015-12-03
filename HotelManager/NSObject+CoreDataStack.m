@@ -7,7 +7,16 @@
 //
 
 #import "NSObject+CoreDataStack.h"
+@import CoreData;
+@import UIKit;
 
 @implementation NSObject (CoreDataStack)
+
+
+#pragma mark - Core Data stack
+
+@property (strong) NSManagedObjectContext *managedObjectContext;
+
+
 
 @end

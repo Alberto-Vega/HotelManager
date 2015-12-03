@@ -13,6 +13,7 @@
 #import "Room.h"
 #import "Reservation.h"
 #import "Guest.h"
+#import "CoreDataStack.h"
 
 @interface AppDelegate ()
 
@@ -52,6 +53,8 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     // Saves changes in the application's managed object context before the application terminates.
     [self saveContext];
+    
+    
 }
 
 - (void)setupRootViewController {

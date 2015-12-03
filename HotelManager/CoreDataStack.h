@@ -1,5 +1,5 @@
 //
-//  NSObject+CoreDataStack.h
+//  CoreDataStack.h
 //  HotelManager
 //
 //  Created by Alberto Vega Gonzalez on 12/2/15.
@@ -10,10 +10,16 @@
 @import CoreData;
 @import UIKit;
 
-@interface NSObject (CoreDataStack)
+@interface CoreDataStack : NSObject
 
 @property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
 @property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
+
++ (CoreDataStack *)sharedStack;
+- (NSURL *)applicationDocumentsDirectory;
+- (void)saveContext;
+
+
 
 @end

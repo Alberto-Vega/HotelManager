@@ -20,6 +20,7 @@
 		BF3202011C0D37C400A3E2B4 /* hotels.json in Resources */ = {isa = PBXBuildFile; fileRef = BF3202001C0D37C400A3E2B4 /* hotels.json */; };
 		BF68FFE51C0FA84900D08055 /* LookUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF68FFE41C0FA84900D08055 /* LookUpViewController.m */; };
 		BF68FFE91C0FCACA00D08055 /* NSObject+CoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = BF68FFE81C0FCACA00D08055 /* NSObject+CoreDataStack.m */; };
+		BF68FFED1C0FD37100D08055 /* CoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = BF68FFEC1C0FD37100D08055 /* CoreDataStack.m */; };
 		BF7E826D1C0E497C00FEC139 /* DateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7E826C1C0E497C00FEC139 /* DateViewController.m */; };
 		BF7E82701C0E5B9400FEC139 /* AvailabilityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7E826F1C0E5B9400FEC139 /* AvailabilityViewController.m */; };
 		BF7E82731C0E5C7300FEC139 /* BookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7E82721C0E5C7300FEC139 /* BookViewController.m */; };
@@ -77,6 +78,8 @@
 		BF68FFE41C0FA84900D08055 /* LookUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LookUpViewController.m; sourceTree = "<group>"; };
 		BF68FFE71C0FCACA00D08055 /* NSObject+CoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+CoreDataStack.h"; sourceTree = "<group>"; };
 		BF68FFE81C0FCACA00D08055 /* NSObject+CoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+CoreDataStack.m"; sourceTree = "<group>"; };
+		BF68FFEB1C0FD37100D08055 /* CoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataStack.h; sourceTree = "<group>"; };
+		BF68FFEC1C0FD37100D08055 /* CoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataStack.m; sourceTree = "<group>"; };
 		BF7E826B1C0E497C00FEC139 /* DateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateViewController.h; sourceTree = "<group>"; };
 		BF7E826C1C0E497C00FEC139 /* DateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateViewController.m; sourceTree = "<group>"; };
 		BF7E826E1C0E5B9400FEC139 /* AvailabilityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AvailabilityViewController.h; sourceTree = "<group>"; };
@@ -187,6 +190,8 @@
 			children = (
 				BF68FFE71C0FCACA00D08055 /* NSObject+CoreDataStack.h */,
 				BF68FFE81C0FCACA00D08055 /* NSObject+CoreDataStack.m */,
+				BF68FFEB1C0FD37100D08055 /* CoreDataStack.h */,
+				BF68FFEC1C0FD37100D08055 /* CoreDataStack.m */,
 			);
 			name = CoreData;
 			sourceTree = "<group>";
@@ -420,6 +425,7 @@
 			files = (
 				BF3201F41C0D075700A3E2B4 /* Room.m in Sources */,
 				BF7E82701C0E5B9400FEC139 /* AvailabilityViewController.m in Sources */,
+				BF68FFED1C0FD37100D08055 /* CoreDataStack.m in Sources */,
 				BF3201FC1C0D1C5700A3E2B4 /* HotelsViewController.m in Sources */,
 				BF3201F31C0D075700A3E2B4 /* Room+CoreDataProperties.m in Sources */,
 				BF3201F01C0D075700A3E2B4 /* Guest.m in Sources */,
