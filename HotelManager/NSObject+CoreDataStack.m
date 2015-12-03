@@ -15,7 +15,7 @@
 
 #pragma mark - Core Data stack
 
-@property (strong) NSManagedObjectContext *managedObjectContext;
+//@property (strong) NSManagedObjectContext *managedObjectContext;
 
 
 
