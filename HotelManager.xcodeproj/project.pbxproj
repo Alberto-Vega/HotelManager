@@ -105,6 +105,7 @@
 		BFCCBBA01C0CF5A3002419AB /* HotelManagerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HotelManagerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFCCBBA41C0CF5A3002419AB /* HotelManagerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HotelManagerUITests.m; sourceTree = "<group>"; };
 		BFCCBBA61C0CF5A3002419AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BFEE206C1C16300B00C8FF94 /* HotelManager_v1.1.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HotelManager_v1.1.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -690,10 +691,11 @@
 		BFCCBB881C0CF5A3002419AB /* HotelManager.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				BFEE206C1C16300B00C8FF94 /* HotelManager_v1.1.xcdatamodel */,
 				BF646E671C10F1EE00491445 /* HotelManager 2.xcdatamodel */,
 				BFCCBB891C0CF5A3002419AB /* HotelManager.xcdatamodel */,
 			);
-			currentVersion = BF646E671C10F1EE00491445 /* HotelManager 2.xcdatamodel */;
+			currentVersion = BFEE206C1C16300B00C8FF94 /* HotelManager_v1.1.xcdatamodel */;
 			name = HotelManager.xcdatamodeld;
 			path = HotelManager/HotelManager.xcdatamodeld;
 			sourceTree = "<group>";
