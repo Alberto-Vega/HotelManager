@@ -9,6 +9,9 @@
 #import "AppDelegate.h"
 #import "ViewController.h"
 
+#import <Fabric/Fabric.h>
+#import <Crashlytics/Crashlytics.h>
+
 #import "Hotel.h"
 #import "Room.h"
 #import "Reservation.h"
@@ -28,6 +31,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [self setupRootViewController];
     [self bootstrapApp];
+    [Fabric with:@[[Crashlytics class]]];
+
     return YES;
 }
 
