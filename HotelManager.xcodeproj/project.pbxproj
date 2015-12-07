@@ -35,6 +35,8 @@
 		BFCCBBA51C0CF5A3002419AB /* HotelManagerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = BFCCBBA41C0CF5A3002419AB /* HotelManagerUITests.m */; };
 		BFEE20741C16313400C8FF94 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFEE20721C16313400C8FF94 /* Crashlytics.framework */; };
 		BFEE20751C16313500C8FF94 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFEE20731C16313400C8FF94 /* Fabric.framework */; };
+		BFEE22951C1632E600C8FF94 /* libFlurry_7.3.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BFEE22941C1632E600C8FF94 /* libFlurry_7.3.0.a */; };
+		BFEE22971C16334100C8FF94 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFEE22961C16334100C8FF94 /* SystemConfiguration.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +112,10 @@
 		BFEE206C1C16300B00C8FF94 /* HotelManager_v1.1.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HotelManager_v1.1.xcdatamodel; sourceTree = "<group>"; };
 		BFEE20721C16313400C8FF94 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Crashlytics.framework; path = ../Crashlytics.framework; sourceTree = "<group>"; };
 		BFEE20731C16313400C8FF94 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Fabric.framework; path = ../Fabric.framework; sourceTree = "<group>"; };
+		BFEE22921C1632E600C8FF94 /* Flurry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Flurry.h; sourceTree = "<group>"; };
+		BFEE22931C1632E600C8FF94 /* FlurryWatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlurryWatch.h; sourceTree = "<group>"; };
+		BFEE22941C1632E600C8FF94 /* libFlurry_7.3.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFlurry_7.3.0.a; sourceTree = "<group>"; };
+		BFEE22961C16334100C8FF94 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,7 +123,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFEE22971C16334100C8FF94 /* SystemConfiguration.framework in Frameworks */,
 				BFEE20741C16313400C8FF94 /* Crashlytics.framework in Frameworks */,
+				BFEE22951C1632E600C8FF94 /* libFlurry_7.3.0.a in Frameworks */,
 				BFEE20751C16313500C8FF94 /* Fabric.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -240,6 +248,7 @@
 		BFCCBB701C0CF5A3002419AB = {
 			isa = PBXGroup;
 			children = (
+				BFEE22961C16334100C8FF94 /* SystemConfiguration.framework */,
 				BFCCBB7B1C0CF5A3002419AB /* HotelManager */,
 				BFCCBB981C0CF5A3002419AB /* HotelManagerTests */,
 				BFCCBBA31C0CF5A3002419AB /* HotelManagerUITests */,
@@ -278,6 +287,9 @@
 		BFCCBB7C1C0CF5A3002419AB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				BFEE22921C1632E600C8FF94 /* Flurry.h */,
+				BFEE22931C1632E600C8FF94 /* FlurryWatch.h */,
+				BFEE22941C1632E600C8FF94 /* libFlurry_7.3.0.a */,
 				BFEE20721C16313400C8FF94 /* Crashlytics.framework */,
 				BFEE20731C16313400C8FF94 /* Fabric.framework */,
 				BFCCBB7D1C0CF5A3002419AB /* main.m */,
@@ -611,6 +623,10 @@
 				INFOPLIST_FILE = HotelManager/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/HotelManager",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.alberto.HotelManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -628,6 +644,10 @@
 				INFOPLIST_FILE = HotelManager/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/HotelManager",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.alberto.HotelManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
