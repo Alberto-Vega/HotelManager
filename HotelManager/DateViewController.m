@@ -83,17 +83,27 @@
 }
 
 - (void)doneButtonSelected:(UIBarButtonItem *)sender {
-    
+
+    NSDate *startDate = [self.startDatePicker date];
     NSDate *endDate = [self.endDatePicker date];
     
+    
     if ([[NSDate date] timeIntervalSinceReferenceDate] > [endDate timeIntervalSinceReferenceDate]) {
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Alert" message:@"Please make sure end date is in the future." preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK" style:(UIAlertActionStyleDefault) handler:^(UIAlertAction * _Nonnull action) {
+            self.endDatePicker.date = [NSDate date];
+        }];
         
-    
-    
+        [alertController addAction:okAction];
+        [self presentViewController:alertController animated:YES completion:nil];
+        
+        return;
     }
     
     AvailabilityViewController *availabilityViewController = [[AvailabilityViewController alloc]init];
+    availabilityViewController.startDate = startDate;
     availabilityViewController.endDate = endDate;
+    
     [self.navigationController pushViewController:availabilityViewController animated:YES];
 }
 

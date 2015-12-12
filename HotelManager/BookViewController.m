@@ -44,13 +44,13 @@
     messageLabel.textAlignment = NSTextAlignmentCenter;
     messageLabel.numberOfLines = 0;
     messageLabel.translatesAutoresizingMaskIntoConstraints = NO;
-    messageLabel.text = [NSString stringWithFormat:@"Reservation at %@, Room: %i, From: Today - To: %@", self.room.hotel.name, self.room.number.intValue, [NSDateFormatter localizedStringFromDate:self.endDate dateStyle: NSDateFormatterShortStyle timeStyle:NSDateFormatterNoStyle]];
+    messageLabel.text = [NSString stringWithFormat:@"Reservation at %@, Room: %i, From: %@ - To: %@", self.room.hotel.name, self.room.number.intValue, [NSDateFormatter localizedStringFromDate:self.startDate dateStyle:NSDateFormatterShortStyle timeStyle:NSDateFormatterNoStyle] , [NSDateFormatter localizedStringFromDate:self.endDate dateStyle: NSDateFormatterShortStyle timeStyle:NSDateFormatterNoStyle]];
     
     [self.view addSubview:messageLabel];
     
-    NSLayoutConstraint *leading = [NSLayoutConstraint constraintWithItem:messageLabel attribute:NSLayoutAttributeLeading relatedBy:(NSLayoutRelationEqual) toItem:self.view attribute:NSLayoutAttributeLeading multiplier:1.0 constant:20.0];
+    NSLayoutConstraint *leading = [NSLayoutConstraint constraintWithItem:messageLabel attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeLeading multiplier:1.0 constant:20.0];
     
-    NSLayoutConstraint *trailing = [NSLayoutConstraint constraintWithItem:messageLabel attribute:(NSLayoutAttributeLeading) relatedBy:(NSLayoutRelationEqual) toItem:self.view attribute:(NSLayoutAttributeTrailing) multiplier:1.0 constant:-20.0];
+    NSLayoutConstraint *trailing = [NSLayoutConstraint constraintWithItem:messageLabel attribute:NSLayoutAttributeTrailing relatedBy:(NSLayoutRelationEqual) toItem:self.view attribute:NSLayoutAttributeTrailing multiplier:1.0 constant:-20.0];
     
     NSLayoutConstraint *centerY = [NSLayoutConstraint constraintWithItem:messageLabel attribute:(NSLayoutAttributeCenterY) relatedBy:(NSLayoutRelationEqual) toItem:self.view attribute:(NSLayoutAttributeCenterY) multiplier:1.0 constant:0.0];
     
