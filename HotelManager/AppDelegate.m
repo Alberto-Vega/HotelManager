@@ -8,7 +8,9 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
-
+#import <Fabric/Fabric.h>
+#import <Crashlytics/Crashlytics.h>
+#import "Flurry.h"
 #import "Hotel.h"
 #import "Room.h"
 #import "Reservation.h"
@@ -28,6 +30,9 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [self setupRootViewController];
     [self bootstrapApp];
+    [Fabric with:@[[Crashlytics class]]];
+    [Flurry startSession:@"X6F2V8VVZKCXGBHNGFQ9"];
+    
     return YES;
 }
 
@@ -54,6 +59,8 @@
     // Saves changes in the application's managed object context before the application terminates.
     [self saveContext];
 //    CoreDataStack *.sharedStack.saveContext
+//    CoreDataStack *sharedStack saveContext = (CoreDataStack *) [[CoreDataStack sharedApplication]saveContext];
+
     
 }
 
@@ -147,6 +154,11 @@
     NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"HotelManager.sqlite"];
     NSError *error = nil;
     NSString *failureReason = @"There was an error creating or loading the application's saved data.";
+    
+    NSDictionary *options = @{NSMigratePersistentStoresAutomaticallyOption : @YES,
+                              NSInferMappingModelAutomaticallyOption : @YES,
+                              NSPersistentStoreUbiquitousContainerIdentifierKey : @"HotelManager"};
+    
     if (![_persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:nil error:&error]) {
         // Report any error we got.
         NSMutableDictionary *dict = [NSMutableDictionary dictionary];
@@ -154,8 +166,7 @@
         dict[NSLocalizedFailureReasonErrorKey] = failureReason;
         dict[NSUnderlyingErrorKey] = error;
         error = [NSError errorWithDomain:@"YOUR_ERROR_DOMAIN" code:9999 userInfo:dict];
-        // Replace this with code to handle the error appropriately.
-        // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+
         NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
         abort();
     }

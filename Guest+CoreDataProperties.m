@@ -15,5 +15,6 @@
 
 @dynamic name;
 @dynamic reservation;
+@dynamic lastName;
 
 @end
