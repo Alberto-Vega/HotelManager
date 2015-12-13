@@ -1,0 +1,51 @@
+/* Trying to notify user about date issue */
+"Alert" = "Alerte";
+
+/* Reserve a room */
+"Book" = "Réserver";
+
+/* Browse hotel rooms */
+"Browse" = "Feuilleter";
+
+/* Prefix for the start date */
+"From" = "De";
+
+/* Goes before hotel name */
+"Hotel" = "Hôtel";
+
+/* App name */
+"Hotel Manager" = "Administrateur Hôtel";
+
+/* Search for available rooms */
+"Lookup" = "Chercher";
+
+/* Name on the reservation */
+"Name" = "Nom";
+
+/* No comment provided by engineer. */
+"OK" = "OK";
+
+/* No comment provided by engineer. */
+"Please enter your name..." = "S'il vous plaît entrez votre nom";
+
+/* User entered invalid date needs to correct it. */
+"Please make sure end date is in the future." = "S'il vous plaît assurez-vous que la date de fin est dans le futur.";
+
+/* Prefix for the hotel name */
+"Reservation at" = "Réservation au";
+
+/* Prefix for the Room number */
+"Room" = "Pièce";
+
+/* Hotel rooms available */
+"Rooms" = "Chambres";
+
+/* No comment provided by engineer. */
+"Search" = "Recherche";
+
+/* Reservation start and end date */
+"Start and End Date" = "Lancer et la date de fin";
+
+/* From - To final date */
+"To" = "À";
+

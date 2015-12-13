@@ -18,6 +18,10 @@
 		BF3201FC1C0D1C5700A3E2B4 /* HotelsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF3201FB1C0D1C5700A3E2B4 /* HotelsViewController.m */; };
 		BF3201FF1C0D2B2800A3E2B4 /* RoomsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF3201FE1C0D2B2800A3E2B4 /* RoomsViewController.m */; };
 		BF3202011C0D37C400A3E2B4 /* hotels.json in Resources */ = {isa = PBXBuildFile; fileRef = BF3202001C0D37C400A3E2B4 /* hotels.json */; };
+		BF47CC7A1C1D41F700E4208F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BF47CC7C1C1D41F700E4208F /* Localizable.strings */; };
+		BF47CC7F1C1D41F700E4208F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BF47CC811C1D41F700E4208F /* InfoPlist.strings */; };
+		BF47CC841C1D41F800E4208F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BF47CC861C1D41F800E4208F /* InfoPlist.strings */; };
+		BF47CC891C1D41F800E4208F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BF47CC8B1C1D41F800E4208F /* InfoPlist.strings */; };
 		BF68FFE51C0FA84900D08055 /* LookUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF68FFE41C0FA84900D08055 /* LookUpViewController.m */; };
 		BF68FFE91C0FCACA00D08055 /* NSObject+CoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = BF68FFE81C0FCACA00D08055 /* NSObject+CoreDataStack.m */; };
 		BF68FFED1C0FD37100D08055 /* CoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = BF68FFEC1C0FD37100D08055 /* CoreDataStack.m */; };
@@ -82,6 +86,14 @@
 		BF47CC751C1CE90900E4208F /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		BF47CC761C1CE91D00E4208F /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		BF47CC771C1D39A300E4208F /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		BF47CC7B1C1D41F700E4208F /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		BF47CC801C1D41F700E4208F /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		BF47CC851C1D41F800E4208F /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		BF47CC8A1C1D41F800E4208F /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		BF47CC8C1C1D42C600E4208F /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		BF47CC8D1C1D42C700E4208F /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		BF47CC8E1C1D42C700E4208F /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		BF47CC8F1C1D42C700E4208F /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		BF646E671C10F1EE00491445 /* HotelManager 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "HotelManager 2.xcdatamodel"; sourceTree = "<group>"; };
 		BF68FFE31C0FA84900D08055 /* LookUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LookUpViewController.h; sourceTree = "<group>"; };
 		BF68FFE41C0FA84900D08055 /* LookUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LookUpViewController.m; sourceTree = "<group>"; };
@@ -273,6 +285,8 @@
 		BFCCBB7B1C0CF5A3002419AB /* HotelManager */ = {
 			isa = PBXGroup;
 			children = (
+				BF47CC811C1D41F700E4208F /* InfoPlist.strings */,
+				BF47CC7C1C1D41F700E4208F /* Localizable.strings */,
 				BF7E82761C0E65AF00FEC139 /* Categories */,
 				BF3201F81C0D079100A3E2B4 /* Model */,
 				BFCCBB7F1C0CF5A3002419AB /* AppDelegate.h */,
@@ -304,6 +318,7 @@
 		BFCCBB981C0CF5A3002419AB /* HotelManagerTests */ = {
 			isa = PBXGroup;
 			children = (
+				BF47CC861C1D41F800E4208F /* InfoPlist.strings */,
 				BFCCBB991C0CF5A3002419AB /* HotelManagerTests.m */,
 				BFCCBB9B1C0CF5A3002419AB /* Info.plist */,
 			);
@@ -313,6 +328,7 @@
 		BFCCBBA31C0CF5A3002419AB /* HotelManagerUITests */ = {
 			isa = PBXGroup;
 			children = (
+				BF47CC8B1C1D41F800E4208F /* InfoPlist.strings */,
 				BFCCBBA41C0CF5A3002419AB /* HotelManagerUITests.m */,
 				BFCCBBA61C0CF5A3002419AB /* Info.plist */,
 			);
@@ -424,8 +440,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF3202011C0D37C400A3E2B4 /* hotels.json in Resources */,
+				BF47CC7A1C1D41F700E4208F /* Localizable.strings in Resources */,
 				BFCCBB8F1C0CF5A3002419AB /* LaunchScreen.storyboard in Resources */,
 				BFCCBB8C1C0CF5A3002419AB /* Assets.xcassets in Resources */,
+				BF47CC7F1C1D41F700E4208F /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,6 +451,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF47CC841C1D41F800E4208F /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -440,6 +459,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF47CC891C1D41F800E4208F /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -522,6 +542,42 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		BF47CC7C1C1D41F700E4208F /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BF47CC7B1C1D41F700E4208F /* es */,
+				BF47CC8C1C1D42C600E4208F /* fr */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		BF47CC811C1D41F700E4208F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BF47CC801C1D41F700E4208F /* es */,
+				BF47CC8D1C1D42C700E4208F /* fr */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		BF47CC861C1D41F800E4208F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BF47CC851C1D41F800E4208F /* es */,
+				BF47CC8E1C1D42C700E4208F /* fr */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		BF47CC8B1C1D41F800E4208F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BF47CC8A1C1D41F800E4208F /* es */,
+				BF47CC8F1C1D42C700E4208F /* fr */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		BFCCBB8D1C0CF5A3002419AB /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
