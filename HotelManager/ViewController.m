@@ -46,7 +46,7 @@
 }
 
 - (void)setupViewController {
-    [self.navigationItem setTitle:@"H & M"];
+    [self.navigationItem setTitle: NSLocalizedString(@"Hotel Manager", @"App name")];
 }
 
 - (void)setupCustomLayout {
@@ -56,9 +56,9 @@
     UIButton *bookButton = [[UIButton alloc]init];
     UIButton *lookupButton = [[UIButton alloc]init];
     
-    [browseButton setTitle:@"Browse" forState:UIControlStateNormal];
-    [bookButton setTitle:@"Book" forState:UIControlStateNormal];
-    [lookupButton setTitle:@"Lookup" forState:UIControlStateNormal];
+    [browseButton setTitle: NSLocalizedString(@"Browse", @"Browse hotel rooms") forState:UIControlStateNormal];
+    [bookButton setTitle: NSLocalizedString(@"Book", @"Reserve a room") forState:UIControlStateNormal];
+    [lookupButton setTitle:NSLocalizedString(@"Lookup", @"Search for available rooms") forState:UIControlStateNormal];
     
     [browseButton setBackgroundColor:[UIColor colorWithRed:1.0 green:1.0 blue:.76 alpha:1.0]];
     [bookButton setBackgroundColor:[UIColor colorWithRed:1.0 green:.91 blue:0.76 alpha:1.0]];

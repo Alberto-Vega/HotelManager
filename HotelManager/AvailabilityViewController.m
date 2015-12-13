@@ -28,7 +28,7 @@
         AppDelegate *delegate = (AppDelegate *)[[UIApplication sharedApplication]delegate];
         
         NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Reservation"];
-        request.predicate = [NSPredicate predicateWithFormat:@"startDate <= %@ AND endDate >= %@", self.endDate, [NSDate date]];
+        request.predicate = [NSPredicate predicateWithFormat:(@"startDate <= %@ AND endDate >= %@"), self.endDate, self.startDate];
         
         NSArray *results = [delegate.managedObjectContext executeFetchRequest:request error:nil];
         NSMutableArray *unavailableRooms = [[NSMutableArray alloc]init];
@@ -64,7 +64,7 @@
 }
 
 - (void)setupAvailabilityViewController {
-    [self setTitle:@"Rooms"];
+    [self setTitle:NSLocalizedString(@"Rooms", "Hotel rooms available")];
 }
 
 - (void)setupTableView {

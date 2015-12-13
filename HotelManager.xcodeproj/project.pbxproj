@@ -522,6 +522,9 @@
 			isa = PBXVariantGroup;
 			children = (
 				BFCCBB8E1C0CF5A3002419AB /* Base */,
+				BF47CC741C1CE8FB00E4208F /* es */,
+				BF47CC751C1CE90900E4208F /* pt-BR */,
+				BF47CC761C1CE91D00E4208F /* it */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";

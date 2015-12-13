@@ -43,7 +43,7 @@
 }
 
 - (void)setupLookupViewController {
-    [self setTitle:@"Search"];
+    [self setTitle:NSLocalizedString(@"Search", nil)];
 }
 
 - (void)setupTableView {
@@ -82,7 +82,9 @@
     }
     
     Reservation *reservation = self.dataSource[indexPath.row];
-    cell.textLabel.text = [NSString stringWithFormat:@"Name: %@, Hotel: %@", reservation.guest.name, reservation.room.hotel.name];
+    NSString *name = NSLocalizedString(@"Name", @"Name on the reservation");
+    NSString *hotel = NSLocalizedString(@"Hotel", @"Goes before hotel name");
+    cell.textLabel.text = [NSString stringWithFormat:@"%@: %@, %@: %@", name, reservation.guest.name, hotel, reservation.room.hotel.name];
     
     return cell;
 }

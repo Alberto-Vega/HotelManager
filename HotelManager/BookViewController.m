@@ -44,7 +44,10 @@
     messageLabel.textAlignment = NSTextAlignmentCenter;
     messageLabel.numberOfLines = 0;
     messageLabel.translatesAutoresizingMaskIntoConstraints = NO;
-    messageLabel.text = [NSString stringWithFormat:@"Reservation at %@, Room: %i, From: %@ - To: %@", self.room.hotel.name, self.room.number.intValue, [NSDateFormatter localizedStringFromDate:self.startDate dateStyle:NSDateFormatterShortStyle timeStyle:NSDateFormatterNoStyle] , [NSDateFormatter localizedStringFromDate:self.endDate dateStyle: NSDateFormatterShortStyle timeStyle:NSDateFormatterNoStyle]];
+    NSString *reservation = NSLocalizedString(@"Reservation at", @"Prefix for the hotel name");
+    NSString *hotel = NSLocalizedString(@"Room", @"Prefix for the Room number");
+    NSString *from = NSLocalizedString(@"From", @"Prefix for the start date");
+    messageLabel.text = [NSString stringWithFormat:@"%@ %@, %@: %i, %@: %@ - To: %@", reservation, hotel, self.room.hotel.name, self.room.number.intValue, from, [NSDateFormatter localizedStringFromDate:self.startDate dateStyle:NSDateFormatterShortStyle timeStyle:NSDateFormatterNoStyle] , [NSDateFormatter localizedStringFromDate:self.endDate dateStyle: NSDateFormatterShortStyle timeStyle:NSDateFormatterNoStyle]];
     
     [self.view addSubview:messageLabel];
     
@@ -61,7 +64,7 @@
 
 - (void)setupNameField {
     self.nameField = [[UITextField alloc]init];
-    self.nameField.placeholder = @"Please enter your name...";
+    self.nameField.placeholder = NSLocalizedString(@"Please enter your name...", nil);
     self.nameField.translatesAutoresizingMaskIntoConstraints = NO;
     
     [self.view addSubview:self.nameField];
