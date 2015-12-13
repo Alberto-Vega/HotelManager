@@ -47,7 +47,8 @@
     NSString *reservation = NSLocalizedString(@"Reservation at", @"Prefix for the hotel name");
     NSString *hotel = NSLocalizedString(@"Room", @"Prefix for the Room number");
     NSString *from = NSLocalizedString(@"From", @"Prefix for the start date");
-    messageLabel.text = [NSString stringWithFormat:@"%@ %@, %@: %i, %@: %@ - To: %@", reservation, hotel, self.room.hotel.name, self.room.number.intValue, from, [NSDateFormatter localizedStringFromDate:self.startDate dateStyle:NSDateFormatterShortStyle timeStyle:NSDateFormatterNoStyle] , [NSDateFormatter localizedStringFromDate:self.endDate dateStyle: NSDateFormatterShortStyle timeStyle:NSDateFormatterNoStyle]];
+    NSString *to = NSLocalizedString(@"To", @"From - To final date");
+    messageLabel.text = [NSString stringWithFormat:@"%@ %@, %@: %i, %@: %@ - %@: %@", reservation, hotel, self.room.hotel.name, self.room.number.intValue, from, [NSDateFormatter localizedStringFromDate:self.startDate dateStyle:NSDateFormatterShortStyle timeStyle:NSDateFormatterNoStyle] , to, [NSDateFormatter localizedStringFromDate:self.endDate dateStyle: NSDateFormatterShortStyle timeStyle:NSDateFormatterNoStyle]];
     
     [self.view addSubview:messageLabel];
     
