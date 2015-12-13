@@ -36,7 +36,7 @@
 }
 
 - (void)setupDateViewController {
-    [self.navigationItem setTitle:@"Select End Date"];
+    [self.navigationItem setTitle:NSLocalizedString(@"Start and End Date", @"Reservation start and end date")];
     [self.navigationItem setRightBarButtonItem:[[UIBarButtonItem alloc]initWithBarButtonSystemItem: UIBarButtonSystemItemDone target: self action: @selector(doneButtonSelected:)]];
 }
 
@@ -64,8 +64,6 @@
     NSLayoutConstraint *endPickerCenterY = [NSLayoutConstraint constraintWithItem:self.endDatePicker attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeCenterY multiplier:1.0 constant: navigationBarHeight / 1.4]; // Height is set to be 0.3 of the view. 0.3333333333333 problem.
     NSLayoutConstraint *endPickerTrailing = [NSLayoutConstraint constraintWithItem:self.endDatePicker attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTrailing multiplier:1.0 constant:0.0];
 
-    
-    
     [self.view addSubview:self.endDatePicker];
     [self.view addSubview:self.startDatePicker];
     
@@ -77,8 +75,6 @@
     endPickerLeading.active = YES;
     endPickerCenterY.active = YES;
     endPickerTrailing.active = YES;
-    
-
 
 }
 
@@ -87,10 +83,9 @@
     NSDate *startDate = [self.startDatePicker date];
     NSDate *endDate = [self.endDatePicker date];
     
-    
     if ([[NSDate date] timeIntervalSinceReferenceDate] > [endDate timeIntervalSinceReferenceDate]) {
-        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Alert" message:@"Please make sure end date is in the future." preferredStyle:UIAlertControllerStyleAlert];
-        UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK" style:(UIAlertActionStyleDefault) handler:^(UIAlertAction * _Nonnull action) {
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:NSLocalizedString(@"Alert", @"Trying to notify user about date issue") message:NSLocalizedString(@"Please make sure end date is in the future.", @"User entered invalid date needs to correct it.") preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *okAction = [UIAlertAction actionWithTitle: NSLocalizedString(@"OK", nil) style:(UIAlertActionStyleDefault) handler:^(UIAlertAction * _Nonnull action) {
             self.endDatePicker.date = [NSDate date];
         }];
         
