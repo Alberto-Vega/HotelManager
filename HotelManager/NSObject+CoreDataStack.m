@@ -10,7 +10,7 @@
 @import CoreData;
 @import UIKit;
 
-@implementation NSObject (CoreDataStack)
+//@implementation NSObject (CoreDataStack)
 
 
 #pragma mark - Core Data stack
@@ -19,4 +19,4 @@
 
 
 
-@end
+//@end
